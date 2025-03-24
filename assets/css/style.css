@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 body{
-    color: wheat;
+    color: rgb(251, 251, 251);
     background-color: #181818;
 }
 
@@ -65,10 +65,44 @@ body{
     @apply hover:bg-[#2b2b2b] rounded-2xl p-3 
 }
 .play_btn{
-    @apply absolute top-[40%] left-[40%] h-[46px] w-[46px] rounded-full bg-[#0269ff] flex items-center justify-center hidden
+    @apply absolute top-[40%] left-[40%] h-[46px] w-[46px] rounded-full bg-[#0269ff] hidden cursor-pointer
+}
+table{
+    @apply  w-full border-separate border-spacing-2
+}
+table .col_tab{
+    @apply w-[50px] 
+}
+table .table_btn{
+    @apply border border-[#2b2b2b] rounded-md p-1
+}
+.pages{
+    @apply flex justify-center items-center py-10
+}
+.number{
+    @apply text-center w-[25px] rounded-md bg-[#0269ff]
+}
+.murge{
+    @apply h-[180px]  rounded-xl overflow-hidden
+}
+.murges{
+    @apply absolute top-0 left-0 bg-gradient-to-r from-[#101010f4] via-[#101010c6] to-[#101010f4] h-[180px] w-full
+}
+ .text{
+    @apply absolute top-0 left-0 h-full w-full flex justify-center items-center text-2xl font-semibold
+}
+footer{
+    @apply h-auto xl:h-[113px] bg-[#121111] mt-5 
+}
+footer .contaiter_box{
+    @apply xl:flex items-center justify-between w-[50%] xl:w-[90%]
+}
+}
+.trending .swiper-slide:hover .play_btn {
+    display: block;
 }
 
-}
+
 
 
 
