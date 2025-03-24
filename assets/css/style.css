@@ -1,0 +1,78 @@
+
+@import "tailwindcss";
+
+body{
+    color: wheat;
+    background-color: #181818;
+}
+
+@layer base {
+    *::-webkit-scrollbar-track {
+        @apply bg-black;
+    }
+
+    *::-webkit-scrollbar {
+        @apply bg-black;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        @apply bg-black;
+    }
+}
+
+@layer components{
+    .btn {
+        @apply bg-white text-black rounded-full p-2 w-25
+    }
+    
+    .contain {
+        @apply absolute bottom-50 
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        @apply after:hidden;
+    }
+    
+}
+
+@layer utilities{
+.announcement .swiper-button-prev{
+    @apply absolute left-0 h-[124px] bg-[#37605cbb] text-white rounded-r-md;
+}
+.announcement .swiper-button-next
+{
+    @apply absolute right-10 h-[124px] bg-[#37605cbb] text-white rounded-l-md;
+}
+.contaiter_box{
+    @apply w-[90%] m-auto 
+}
+.title{
+    @apply font-bold text-4xl flex gap-2
+}
+.h3{
+   @apply font-bold text-[20px] mt-8
+}
+.genre{
+    @apply bg-[#3e3e3e] rounded-full p-1 w-[65px] mt-2 text-center
+}
+.sound{
+    @apply absolute right-10 top-2 text-gray-400 rounded-full h-[22px] w-[53px] bg-[#3e3e3e] flex items-center justify-evenly
+}
+.like{
+    @apply absolute right-2 top-2 rounded-full h-[24px] w-[24px] bg-[#3e3e3e] flex items-center justify-center
+}
+.trending .swiper-slide{
+    @apply hover:bg-[#2b2b2b] rounded-2xl p-3 
+}
+.play_btn{
+    @apply absolute top-[40%] left-[40%] h-[46px] w-[46px] rounded-full bg-[#0269ff] flex items-center justify-center hidden
+}
+
+}
+
+
+
+
+
+
+
