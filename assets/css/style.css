@@ -1,12 +1,15 @@
 
 @import "tailwindcss";
 
-body{
-    color: rgb(251, 251, 251);
-    background-color: #181818;
-}
+
 
 @layer base {
+    body{
+        @apply  text-white bg-[#181818]
+    }
+    *{
+        @apply m-0 p-0 box-border
+    }
     *::-webkit-scrollbar-track {
         @apply bg-black;
     }
@@ -43,38 +46,80 @@ body{
 {
     @apply absolute right-10 h-[124px] bg-[#37605cbb] text-white rounded-l-md;
 }
+ .slidbutton{
+    @apply absolute top-0 right-10  h-[35.67px] w-[35.67px] rounded-full  bg-[#2b2b2b] flex justify-center items-center
+}
+ .slidbutton1{
+    @apply absolute top-0 right-0 h-[35.67px] w-[35.67px] rounded-full  bg-[#2b2b2b] flex justify-center items-center
+}
+
+
+.header{
+    @apply flex justify-between items-center h-[57px] m-5
+}
+.logo{
+    @apply w-[220px] 
+}
+.container_join{
+    @apply flex items-center justify-evenly w-[281px]
+}
+
+.banner{
+    @apply w-full h-[720px] overflow-hidden
+}
+.banner .btn_banner{
+    @apply bg-[#0066ff] w-[214px] h-[68px] mt-5 rounded-full uppercase
+}
+.play{
+    @apply absolute bottom-0 m-5 animate-pulse
+}
+
+.relaeses{
+    @apply m-auto grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-10
+}
 .contaiter_box{
     @apply w-[90%] m-auto 
 }
 .title{
-    @apply font-bold text-4xl flex gap-2
+    @apply font-bold md:text-4xl text-2xl flex gap-2
+}
+.h2{
+    @apply font-bold md:text-3xl text-2xl
 }
 .h3{
    @apply font-bold text-[20px] mt-8
+}
+.h4{
+    @apply font-bold text-xl
 }
 .genre{
     @apply bg-[#3e3e3e] rounded-full p-1 w-[65px] mt-2 text-center
 }
 .sound{
-    @apply absolute right-10 top-2 text-gray-400 rounded-full h-[22px] w-[53px] bg-[#3e3e3e] flex items-center justify-evenly
+    @apply absolute right-10 top-2 text-gray-400 rounded-full h-[22px] w-[53px] bg-[#3e3e3e] flex items-center justify-evenly cursor-pointer
 }
 .like{
-    @apply absolute right-2 top-2 rounded-full h-[24px] w-[24px] bg-[#3e3e3e] flex items-center justify-center
+    @apply absolute right-2 top-2 rounded-full h-[24px] w-[24px] bg-[#3e3e3e] flex items-center justify-center cursor-pointer
 }
+
 .trending .swiper-slide{
     @apply hover:bg-[#2b2b2b] rounded-2xl p-3 
 }
 .play_btn{
-    @apply absolute top-[40%] left-[40%] h-[46px] w-[46px] rounded-full bg-[#0269ff] hidden cursor-pointer
+    @apply absolute top-[40%] left-[40%] h-[46px] w-[46px] rounded-full bg-[#0269ff] hidden cursor-pointer 
 }
-table{
-    @apply  w-full border-separate border-spacing-2
+
+.table{
+    @apply h-[84px] w-full  flex items-center justify-around
 }
-table .col_tab{
-    @apply w-[50px] 
+.table_text{
+    @apply xl:w-[400px] w-[150px] overflow-hidden  
 }
-table .table_btn{
-    @apply border border-[#2b2b2b] rounded-md p-1
+.table_items{
+    @apply hidden xl:block
+}
+.table_btn{
+    @apply border border-gray-500 p-1 rounded-md cursor-pointer
 }
 .pages{
     @apply flex justify-center items-center py-10
@@ -82,8 +127,15 @@ table .table_btn{
 .number{
     @apply text-center w-[25px] rounded-md bg-[#0269ff]
 }
+.audio{
+    @apply w-sm hidden xl:block py-5
+}
+
+.Browse{
+    @apply grid grid-cols-2 md:grid-cols-3 gap-6
+}
 .murge{
-    @apply h-[180px]  rounded-xl overflow-hidden
+    @apply h-[180px]  rounded-xl overflow-hidden cursor-pointer hover:border-2 border-[#0269ff]
 }
 .murges{
     @apply absolute top-0 left-0 bg-gradient-to-r from-[#101010f4] via-[#101010c6] to-[#101010f4] h-[180px] w-full
@@ -91,16 +143,58 @@ table .table_btn{
  .text{
     @apply absolute top-0 left-0 h-full w-full flex justify-center items-center text-2xl font-semibold
 }
+
+.creater{
+    @apply h-[253px] w-[253px] rounded-full overflow-hidden 
+}
+.creaters{
+    @apply absolute right-3 top-8 h-[181px] w-[55px] flex flex-col justify-between
+}
+.creaters_items{
+    @apply w-full rounded-xl h-[55px] overflow-hidden bg-black cursor-pointer hover:shadow-sm  hover:shadow-black
+}
+.contact{
+    @apply h-[492px] rounded-3xl my-5 overflow-hidden relative
+}
+.contact p,.contact1 p{
+    @apply text-[16px]
+}
+.contact1{
+    @apply  bg-gradient-to-r from-[#101010f4] via-[#101010c6] to-[#101010f4]
+}
+.contact_btn{
+    @apply flex justify-center items-center gap-2 p-1 bg-[#0269ff] rounded-full w-[147px] h-[40px] 
+}
+.contact_btn1{
+    @apply flex justify-center items-center gap-2 p-1 bg-[#0269ff] rounded-full w-[262px] xl:w-[211px] h-[40px] mt-4 xl:mt-0 
+}
+.mail{
+    @apply flex items-center ps-4 bg-white rounded-full w-full xl:w-[211px] h-[40px] 
+}
+input::placeholder{
+    @apply text-black text-[16px]
+}
+.email{
+    @apply  h-[60px] flex flex-wrap items-center justify-between p-3 rounded-full xl:bg-white   
+}
+
+.topcreater .swiper-button-prev{
+    @apply absolute top-0 left-0
+}
 footer{
     @apply h-auto xl:h-[113px] bg-[#121111] mt-5 
 }
 footer .contaiter_box{
-    @apply xl:flex items-center justify-between w-[50%] xl:w-[90%]
+    @apply xl:flex items-center justify-between w-[90%]
+}
+footer li{
+    @apply mt-3 md:mt-0
 }
 }
 .trending .swiper-slide:hover .play_btn {
     display: block;
 }
+
 
 
 

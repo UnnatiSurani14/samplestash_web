@@ -61,10 +61,34 @@ const  trendingSwiper = new Swiper(".trending", {
   },
 
   breakpoints: {
-    320: { slidesPerView: 1 },
+    320: { slidesPerView: 1.5 },
     768: { slidesPerView: 2 },
     1024: { slidesPerView: 4 },
     1280: { slidesPerView: 5 },
   }
 });
 
+const  topSwiper = new Swiper(".topslide", {
+  centeredSlides: false,
+  slidesPerView: 2,
+  spaceBetween: 20,
+  grabCursor: true,
+  loop: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next", 
+    prevEl: ".swiper-button-prev",  
+  },
+
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+
+  breakpoints: {
+    320: { slidesPerView: 1.5},
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 4 },
+    1280: { slidesPerView: 5 },
+  }
+});
