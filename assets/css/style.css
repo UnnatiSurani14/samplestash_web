@@ -35,32 +35,43 @@
     .swiper-button-prev {
         @apply after:hidden;
     }
+
+    .h2{
+        @apply font-bold md:text-3xl text-2xl
+    }
+    .h3{
+       @apply font-bold text-[20px] mt-8
+    }
+    .h4{
+        @apply font-bold text-xl
+    }
     
 }
 
 @layer utilities{
 .announcement .swiper-button-prev{
-    @apply absolute left-0 h-[124px] bg-[#37605cbb] text-white rounded-r-md;
+    @apply absolute left-0 h-[124px] bg-[#37605cbb] text-white rounded-r-md ;
 }
 .announcement .swiper-button-next
 {
     @apply absolute right-10 h-[124px] bg-[#37605cbb] text-white rounded-l-md;
 }
+
  .slidbutton{
-    @apply absolute top-0 right-10  h-[35.67px] w-[35.67px] rounded-full  bg-[#2b2b2b] flex justify-center items-center
+    @apply absolute top-0 right-10  h-[35.67px] w-[35.67px] rounded-full  bg-[#2b2b2b] flex justify-center items-center z-0
 }
  .slidbutton1{
-    @apply absolute top-0 right-0 h-[35.67px] w-[35.67px] rounded-full  bg-[#2b2b2b] flex justify-center items-center
+    @apply absolute top-0 right-0 h-[35.67px] w-[35.67px] rounded-full  bg-[#2b2b2b] flex justify-center items-center z-0
 }
 
 
 .header{
-    @apply flex justify-between items-center h-[57px] m-5
+    @apply flex justify-between items-center h-[57px] 
 }
-.logo{
+.header .logo{
     @apply w-[220px] 
 }
-.container_join{
+.header .container_join{
     @apply flex items-center justify-evenly w-[281px]
 }
 
@@ -70,28 +81,20 @@
 .banner .btn_banner{
     @apply bg-[#0066ff] w-[214px] h-[68px] mt-5 rounded-full uppercase
 }
-.play{
+.banner .play{
     @apply absolute bottom-0 m-5 animate-pulse
 }
 
 .relaeses{
     @apply m-auto grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-10
 }
-.contaiter_box{
+.container_box{
     @apply w-[90%] m-auto 
 }
 .title{
     @apply font-bold md:text-4xl text-2xl flex gap-2
 }
-.h2{
-    @apply font-bold md:text-3xl text-2xl
-}
-.h3{
-   @apply font-bold text-[20px] mt-8
-}
-.h4{
-    @apply font-bold text-xl
-}
+
 .genre{
     @apply bg-[#3e3e3e] rounded-full p-1 w-[65px] mt-2 text-center
 }
@@ -113,7 +116,7 @@
     @apply h-[84px] w-full  flex items-center justify-around
 }
 .table_text{
-    @apply xl:w-[400px] w-[150px] overflow-hidden  
+    @apply xl:w-[400px] w-[120px] overflow-hidden  
 }
 .table_items{
     @apply hidden xl:block
@@ -134,18 +137,18 @@
 .Browse{
     @apply grid grid-cols-2 md:grid-cols-3 gap-6
 }
-.murge{
+.Browse .murge{
     @apply h-[180px]  rounded-xl overflow-hidden cursor-pointer hover:border-2 border-[#0269ff]
 }
-.murges{
+.Browse .murges{
     @apply absolute top-0 left-0 bg-gradient-to-r from-[#101010f4] via-[#101010c6] to-[#101010f4] h-[180px] w-full
 }
- .text{
+.Browse .text{
     @apply absolute top-0 left-0 h-full w-full flex justify-center items-center text-2xl font-semibold
 }
 
 .creater{
-    @apply h-[253px] w-[253px] rounded-full overflow-hidden 
+    @apply h-[253px] w-[253px] rounded-full overflow-hidden hover:scale-102
 }
 .creaters{
     @apply absolute right-3 top-8 h-[181px] w-[55px] flex flex-col justify-between
@@ -153,20 +156,24 @@
 .creaters_items{
     @apply w-full rounded-xl h-[55px] overflow-hidden bg-black cursor-pointer hover:shadow-sm  hover:shadow-black
 }
+
 .contact{
-    @apply h-[492px] rounded-3xl my-5 overflow-hidden relative
+    @apply h-[492px] rounded-3xl my-5 overflow-hidden relative bg-black
 }
 .contact p,.contact1 p{
     @apply text-[16px]
 }
 .contact1{
-    @apply  bg-gradient-to-r from-[#101010f4] via-[#101010c6] to-[#101010f4]
+    @apply  bg-gradient-to-r from-[#101010f4] via-[#101010c6] to-[#101010f4] rounded-3xl overflow-hidden
 }
 .contact_btn{
     @apply flex justify-center items-center gap-2 p-1 bg-[#0269ff] rounded-full w-[147px] h-[40px] 
 }
+.message_btn{
+    @apply w-full xl:w-[262px] 
+}
 .contact_btn1{
-    @apply flex justify-center items-center gap-2 p-1 bg-[#0269ff] rounded-full w-[262px] xl:w-[211px] h-[40px] mt-4 xl:mt-0 
+    @apply flex justify-center items-center gap-2 p-1 bg-[#0269ff] rounded-full w-full h-[40px] mt-4 xl:mt-0 
 }
 .mail{
     @apply flex items-center ps-4 bg-white rounded-full w-full xl:w-[211px] h-[40px] 

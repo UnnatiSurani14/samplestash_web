@@ -6,6 +6,13 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $("#close").click(function () {
+    $(".asside").toggle();
+  });
+});
+
+
 const announcementSwiper = new Swiper(".announcement", {
   centeredSlides: true,
   slidesPerView: 1,

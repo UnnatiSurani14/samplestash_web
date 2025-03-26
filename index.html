@@ -10,10 +10,11 @@
 </head>
 <body>
   <!-- header start -->
-  <header class="">
+  <header class=" p-5 sticky top-0 z-10 bg-black">
+    <!-- asside -->
     <div class="asside absolute top-0 right-0 w-auto bg-black z-10 hidden p-5" id="asside">
       <div class="flex flex-col items-center gap-6 p-5 relative">
-        <div  class="absolute left-0 top-0" ><img src="assets/image/close.png" alt="" ></div>
+        <div  class="absolute left-0 top-0 border" id="close"><img src="assets/image/close.png" alt="" ></div>
         
         <nav class=" text-white">
           <ul class="flex flex-col gap-6"><li><a href="#"  aria-label="Explore">Explore</a></li>
@@ -26,7 +27,7 @@
         </button>
       </div>
     </div>
-  <div class=" header">
+  <div class=" header ">
       <div class="flex justify-between items-center w-[555px]">
     <div class="logo">
       <a href="#" aria-label="logo" class="flex items-center" >
@@ -131,7 +132,7 @@
 
   <!-- relaeses -->
    <section>
-    <div class="contaiter_box">
+    <div class="container_box">
     <div >
       <div class="title my-10 ">
         <p>Latest Releases</p>
@@ -211,7 +212,7 @@
 
    <!-- trending -->
    <section class="mt-20">
-    <div class="contaiter_box relative">
+    <div class="container_box relative">
       <div>
         <div class="title my-10 ">
           <img src="assets/image/fire.png" alt="" width="28">
@@ -298,7 +299,7 @@
 
    <!-- simple stash -->
    <section class="mt-20">
-    <div class="contaiter_box relative">
+    <div class="container_box relative">
       <div>
         <div class="title my-10 ">
           <p>Simple Stash Exclisives</p>
@@ -379,7 +380,7 @@
 
    <!-- trending Samples -->
     <section>
-      <div class="contaiter_box">
+      <div class="container_box">
         <div class="flex justify-between items-center">
           <div class="title my-10 ">
             <div class="flex gap-3"><img src="assets/image/fire.png" alt="" width="28">
@@ -546,10 +547,10 @@
 
     <!-- Browse -->
      <section>
-      <div class="contaiter_box">
+      <div class="container_box">
         <div>
           <div class="title my-10 ">
-            <p>Brose by Genre</p>
+            <p>Browse by Genre</p>
           </div>
         
         </div>
@@ -591,7 +592,7 @@
 
      <!-- top creators -->
       <section>
-        <div class="contaiter_box relative ">
+        <div class="container_box relative ">
           <div class="">
             <div class="title my-10 ">
               <p>Top creators</p>
@@ -722,10 +723,10 @@
 
      <!-- contact -->
       <section>
-        <div class="contaiter_box">
+        <div class="container_box">
           <div class="flex flex-wrap py-10">
             <div class="w-full flex flex-wrap justify-between">
-            <div class="contact w-full md:w-[492px] bg-black">
+            <div class="contact w-full md:w-[492px]">
               <div class="p-5">
                 <div class="px-3 md:px-10 py-5"><h2 class="h2">Access all purchases & <span class="text-[#0269ff]">instans</span> downlads</h2></div>
                 <div class="px-3 md:px-10 text-gray-400"><p>After purchas ,you can immediately access your packs and samples in your account. Enjoy instant availability of your purchased contend.</p></div>
@@ -751,11 +752,11 @@
                 <div class="w-full xl:w-[637px] z-10 mt-10">
                   <div>
                     <form action="">
-                      <div class="p-5 font-bold"> <label for="your email">Your Email</label></div>
+                      <div class="p-5 font-bold text-xl"> <label for="your email">Your Email</label></div>
                      
                       <div class="email">
                         <div class="mail p-2 bg-white"><input type="email" placeholder="Your@email.com" aria-required="true"></div>
-                        <div><a href="" role="button"><button class="contact_btn1 "><span>JOIN NEWSLETTER</span><img src="assets/image/mail_icon.png" alt="" width="20px"></button></a></div>
+                        <div class="message_btn"><a href="" role="button"><button class="contact_btn1 "><span>JOIN NEWSLETTER</span><img src="assets/image/mail_icon.png" alt="" width="20px"></button></a></div>
                       </div>
                     </form>
                   </div>
