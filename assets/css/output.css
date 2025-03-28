@@ -396,9 +396,6 @@
   .ms-\[-8px\] {
     margin-inline-start: -8px;
   }
-  .me-10 {
-    margin-inline-end: calc(var(--spacing) * 10);
-  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -543,8 +540,14 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
+  }
+  .w-\[20px\] {
+    width: 20px;
   }
   .w-\[80\%\] {
     width: 80%;
@@ -1990,6 +1993,16 @@
   .transform-view {
     transform-box: view-box;
   }
+  .sm\:my-10 {
+    @media (width >= 40rem) {
+      margin-block: calc(var(--spacing) * 10);
+    }
+  }
+  .sm\:mt-20 {
+    @media (width >= 40rem) {
+      margin-top: calc(var(--spacing) * 20);
+    }
+  }
   .md\:top-20 {
     @media (width >= 48rem) {
       top: calc(var(--spacing) * 20);
@@ -2045,6 +2058,21 @@
       padding-block: calc(var(--spacing) * 10);
     }
   }
+  .xl\:my-10 {
+    @media (width >= 80rem) {
+      margin-block: calc(var(--spacing) * 10);
+    }
+  }
+  .xl\:me-10 {
+    @media (width >= 80rem) {
+      margin-inline-end: calc(var(--spacing) * 10);
+    }
+  }
+  .xl\:mt-20 {
+    @media (width >= 80rem) {
+      margin-top: calc(var(--spacing) * 20);
+    }
+  }
   .xl\:block {
     @media (width >= 80rem) {
       display: block;
@@ -2070,6 +2098,16 @@
       height: 100%;
     }
   }
+  .xl\:w-\[28px\] {
+    @media (width >= 80rem) {
+      width: 28px;
+    }
+  }
+  .xl\:w-\[492px\] {
+    @media (width >= 80rem) {
+      width: 492px;
+    }
+  }
   .xl\:w-\[596px\] {
     @media (width >= 80rem) {
       width: 596px;
@@ -2078,6 +2116,21 @@
   .xl\:w-\[637px\] {
     @media (width >= 80rem) {
       width: 637px;
+    }
+  }
+  .xl\:w-\[965px\] {
+    @media (width >= 80rem) {
+      width: 965px;
+    }
+  }
+  .xl\:flex-wrap {
+    @media (width >= 80rem) {
+      flex-wrap: wrap;
+    }
+  }
+  .xl\:py-10 {
+    @media (width >= 80rem) {
+      padding-block: calc(var(--spacing) * 10);
     }
   }
 }
@@ -2240,10 +2293,14 @@
   .title {
     display: flex;
     gap: calc(var(--spacing) * 2);
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+    @media (width >= 40rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
     @media (width >= 48rem) {
       font-size: var(--text-4xl);
       line-height: var(--tw-leading, var(--text-4xl--line-height));
@@ -2458,6 +2515,7 @@
     font-size: 16px;
   }
   .contact1 {
+    z-index: 0;
     overflow: hidden;
     border-radius: var(--radius-3xl);
     --tw-gradient-position: to right in oklab;

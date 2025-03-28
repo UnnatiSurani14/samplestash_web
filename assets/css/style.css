@@ -92,7 +92,7 @@
     @apply w-[90%] m-auto 
 }
 .title{
-    @apply font-bold md:text-4xl text-2xl flex gap-2
+    @apply font-bold md:text-4xl text-xl sm:text-2xl flex gap-2
 }
 
 .genre{
@@ -164,7 +164,7 @@
     @apply text-[16px]
 }
 .contact1{
-    @apply  bg-gradient-to-r from-[#101010f4] via-[#101010c6] to-[#101010f4] rounded-3xl overflow-hidden
+    @apply  bg-gradient-to-r from-[#101010f4] via-[#101010c6] to-[#101010f4] rounded-3xl overflow-hidden z-0
 }
 .contact_btn{
     @apply flex justify-center items-center gap-2 p-1 bg-[#0269ff] rounded-full w-[147px] h-[40px] 
